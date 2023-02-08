@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300;1,400&display=swap');
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./../fonts/Montserrat-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./../fonts/Montserrat-Medium.ttf);
+  font-weight: 500;
+}
+
+body {
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+div {
+  /* Если нужен цвет для заднего фона */
+  /* background: lime; */
+
+  /* Если нужно сделать задний фон изображением */
+  /* Простые свойства */
+  background-image: url('/images/freysteinn-g-jonsson-b5JksapY8pM-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  /* Размеры блока */
+  width: 300px;
+  height: 100px;
+
+  /* Свойства для работы с текстом  */
+  font-size: 10px;
+  line-height: 16px; /* 1.6 || 16px || 160% */
+  font-weight: 500;
+  font-style: italic;
+  text-align: left;
+  letter-spacing: 2px; /* normal */
+
+  color: red;
+
+  /* Отображение содержимого в блоке */
+  overflow: scroll;
+
+  /* Border */
+  /* Сложное свойство */
+  border: 10px dashed blue;
+
+  /* Простые свойства */
+  /* border-width: 10px;
+  border-style: dashed;
+  border-color: blue; */
+
+  /* Границы на каждую сторону */
+  /* border-top: 10px solid red;
+  border-bottom: 10px solid green;
+  border-left: 10px solid orange;
+  border-right: 10px solid grey; */
+
+  /* Внутренние отступы: Пример 1 */
+  padding: 100px 50px 10px 20px;
+  /* padding-left: 20px;
+  padding-right: 50px;
+  padding-top: 100px;
+  padding-bottom: 10px; */
+
+  /* Внутренние отступы: Пример 2 */
+  /* padding: 20px 50px; */
+  /* padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  padding-right: 50px; */
+
+  /* Внутренние отступы: Пример 3 */
+  /* padding: 50px 10px 100px; */
+  /* padding-top: 50px;
+  padding-bottom: 100px;
+  padding-left: 10px;
+  padding-right: 10px; */
+
+  /* Для margin действуют примеры вверху */
+  margin: 100px 50px 20px 10px;
+}
+
+/* Специфичность, какое свойство имеет большую важность */
+p { /* 1 */
+  color: white;
+}
+
+p span { /* 1 + 1 */
+  color: red;
+}
+
+.style { /* 10 */
+  color: fuchsia;
+}
+
+#style { /* 100 */
+  color: green;
+}
+
+p.style { /* 1 + 10 */
+  color: aqua;
+}
+
+p.style#style { /* 1 + 10 + 100 */
+  color: grey;
+}
+
+p.style.style-2 { /* 1 + 10 + 10 */
+  font-size: 38px;
+  color: brown;
+}
